@@ -21,8 +21,5 @@ Declare your style:
 Create the DatePicker/TimePicker with
 
 ```java
-DatePickerDialog dialog = DatePickerDialog.newInstance(OnDateSetListener callBack, int year,
-                                               int monthOfYear,
-                                               int dayOfMonth,
-                                               int R.style.DateTimePicker);
+DatePickerDialog dialog = DatePickerDialog.newInstance(callBack, year, monthOfYear, dayOfMonth, R.style.DateTimePicker);
 ```
