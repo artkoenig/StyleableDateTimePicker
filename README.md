@@ -3,5 +3,26 @@ StylableDateTimePicker
 
 A stylable version of the date/time picker for Android 4.0+
 
-![Styled DatePicker](/../screenshots/screenshots/orange_datepicker.png?raw=true "DatePicker Orange Theme")
-![Styled TimePicker](/../screenshots/screenshots/orange_timepicker.png?raw=true "TimePicker Orange Theme")
+![Styled DatePicker](/../screenshots/screenshots/screenshot.png?raw=true "Example Theme")
+
+Declare your style:
+
+```java
+<style name="DateTimePicker">
+    <item name="headerBackgroundColor">...</item>
+    <item name="hightlightedTextColor">...</item>
+    <item name="buttonBackground">...</item>
+    <item name="buttonTextColor">...</item>
+    <item name="circleHighlightColor">...</item>
+    <item name="defaultTextColor">...</item>
+</style>
+```
+
+Create the DatePicker/TimePicker with
+
+```java
+DatePickerDialog dialog = DatePickerDialog.newInstance(OnDateSetListener callBack, int year,
+                                               int monthOfYear,
+                                               int dayOfMonth,
+                                               int R.style.DateTimePicker);
+```
