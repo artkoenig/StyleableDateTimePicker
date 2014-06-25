@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DateTimePicker">
+        <attr name="headerBackgroundColor" format="reference|color"/>
+        <attr name="hightlightedTextColor" format="reference|color"/>
+        <attr name="buttonBackground" format="reference|color"/>
+        <attr name="buttonTextColor" format="reference|color"/>
+        <attr name="circleHighlightColor" format="reference|color"/>
+        <attr name="defaultTextColor" format="reference|color"/>
+    </declare-styleable>
+</resources>
