@@ -1,7 +1,7 @@
 StylableDateTimePicker
 ======================
 
-A stylable version of the date/time picker for Android 4.0+
+A styleable version of the date/time picker for Android 4.0+
 
 ![Styled DatePicker](/../screenshots/screenshots/screenshot.png?raw=true "Example Theme")
 
