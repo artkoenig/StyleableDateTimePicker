@@ -205,7 +205,9 @@ public class DatePickerDialog extends DialogFragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView: ");
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        if(getDialog() != null) {
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        }
 
         int styleId = (getArguments() != null)? getArguments().getInt(STYLE_ARG, R.style.defaultColorTheme) : R.style.defaultColorTheme;
         Log.d(TAG, "styleId: " + String.valueOf(styleId) + " default: " + String.valueOf(R.style.defaultColorTheme));
@@ -266,7 +268,9 @@ public class DatePickerDialog extends DialogFragment implements
                     mCallBack.onDateSet(DatePickerDialog.this, mCalendar.get(Calendar.YEAR),
                             mCalendar.get(Calendar.MONTH), mCalendar.get(Calendar.DAY_OF_MONTH));
                 }
-                dismiss();
+                if(getDialog() != null) {
+                    dismiss();
+                }
             }
         });
 

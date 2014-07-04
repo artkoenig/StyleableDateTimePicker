@@ -7,5 +7,8 @@
         <attr name="buttonTextColor" format="reference|color"/>
         <attr name="circleHighlightColor" format="reference|color"/>
         <attr name="defaultTextColor" format="reference|color"/>
+        <attr name="selectedDayTextSize" format="reference|dimension"/>
+        <attr name="selectedMonthTextSize" format="reference|dimension"/>
+        <attr name="selectedYearTextSize" format="reference|dimension"/>
     </declare-styleable>
 </resources>
