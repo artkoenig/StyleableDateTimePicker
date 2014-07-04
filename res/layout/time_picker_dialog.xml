@@ -34,9 +34,10 @@
     <com.android.datetimepicker.time.RadialPickerLayout
         android:id="@+id/time_picker"
         android:layout_height="@dimen/picker_dimen"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_gravity="center"
         android:background="@color/circle_background"
+        android:layout_weight="1"
         android:focusable="true"
         android:focusableInTouchMode="true" />
     <View

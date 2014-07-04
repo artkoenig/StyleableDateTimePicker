@@ -176,7 +176,9 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        if (getDialog() != null) {
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        }
 
         int styleId = (getArguments() != null)? getArguments().getInt(DatePickerDialog.STYLE_ARG, R.style.defaultColorTheme) : R.style.defaultColorTheme;
         Log.d(TAG, "styleIdTime: " + String.valueOf(styleId) + " default: " + String.valueOf(R.style.defaultColorTheme));

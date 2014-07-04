@@ -17,11 +17,12 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/day_picker_selected_date_layout"
-    android:layout_width="@dimen/date_picker_component_width"
-    android:layout_height="0dip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_weight="1"
     android:background="@color/white"
     android:gravity="center"
+    android:padding="8dp"
     android:orientation="vertical" >
 
     <com.android.datetimepicker.AccessibleLinearLayout
@@ -41,20 +42,18 @@
             android:gravity="center_horizontal|bottom"
             android:includeFontPadding="false"
             android:textColor="?hightlightedTextColor"
-            android:textSize="@dimen/selected_date_month_size" />
+            android:textSize="?selectedMonthTextSize" />
 
         <TextView
             android:id="@+id/date_picker_day"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="-10dip"
-            android:layout_marginTop="-10dip"
             android:duplicateParentState="true"
             android:gravity="center"
             android:includeFontPadding="false"
             android:textColor="?hightlightedTextColor"
-            android:textSize="@dimen/selected_date_day_size" />
+            android:textSize="?selectedDayTextSize" />
     </com.android.datetimepicker.AccessibleLinearLayout>
 
     <com.android.datetimepicker.AccessibleTextView
@@ -65,6 +64,6 @@
         android:gravity="center_horizontal|top"
         android:includeFontPadding="false"
         android:textColor="?hightlightedTextColor"
-        android:textSize="@dimen/selected_date_year_size" />
+        android:textSize="?selectedYearTextSize" />
 
 </LinearLayout>

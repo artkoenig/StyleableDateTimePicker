@@ -55,5 +55,8 @@
         <item name="buttonTextColor">@color/done_text_color</item>
         <item name="circleHighlightColor">@color/circle_background</item>
         <item name="defaultTextColor">@color/date_picker_text_normal</item>
+        <item name="selectedDayTextSize">@dimen/selected_date_day_size</item>
+        <item name="selectedMonthTextSize">@dimen/selected_date_month_size</item>
+        <item name="selectedYearTextSize">@dimen/selected_date_year_size</item>
     </style>
 </resources>
