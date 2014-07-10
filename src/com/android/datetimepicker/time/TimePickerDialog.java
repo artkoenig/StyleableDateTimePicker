@@ -238,6 +238,10 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
                     mCallback.onTimeSet(mTimePicker,
                             mTimePicker.getHours(), mTimePicker.getMinutes());
                 }
+				// save state for reusing on back stack changes
+				mInitialHourOfDay = mTimePicker.getHours();
+				mInitialMinute = mTimePicker.getMinutes();
+
 				if(getDialog() != null){
 					dismiss();
 				}
