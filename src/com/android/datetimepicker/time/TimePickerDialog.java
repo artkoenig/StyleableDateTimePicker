@@ -161,19 +161,6 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (savedInstanceState != null && savedInstanceState.containsKey(KEY_HOUR_OF_DAY)
-                    && savedInstanceState.containsKey(KEY_MINUTE)
-                    && savedInstanceState.containsKey(KEY_IS_24_HOUR_VIEW)) {
-            mInitialHourOfDay = savedInstanceState.getInt(KEY_HOUR_OF_DAY);
-            mInitialMinute = savedInstanceState.getInt(KEY_MINUTE);
-            mIs24HourMode = savedInstanceState.getBoolean(KEY_IS_24_HOUR_VIEW);
-            mInKbMode = savedInstanceState.getBoolean(KEY_IN_KB_MODE);
-        }
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         if (getDialog() != null) {
@@ -302,6 +289,15 @@ public class TimePickerDialog extends DialogFragment implements OnValueSelectedL
         } else if (mTypedTimes == null) {
             mTypedTimes = new ArrayList<Integer>();
         }
+
+		if (savedInstanceState != null && savedInstanceState.containsKey(KEY_HOUR_OF_DAY)
+				&& savedInstanceState.containsKey(KEY_MINUTE)
+				&& savedInstanceState.containsKey(KEY_IS_24_HOUR_VIEW)) {
+			mInitialHourOfDay = savedInstanceState.getInt(KEY_HOUR_OF_DAY);
+			mInitialMinute = savedInstanceState.getInt(KEY_MINUTE);
+			mIs24HourMode = savedInstanceState.getBoolean(KEY_IS_24_HOUR_VIEW);
+			mInKbMode = savedInstanceState.getBoolean(KEY_IN_KB_MODE);
+		}
 
         return view;
     }
