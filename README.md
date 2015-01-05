@@ -34,6 +34,30 @@ FragmentTransaction ft = getFragmentManager().beginTransaction();
 ft.add(R.id.picker_wrapper, picker);
 ft.commit();
 ```
+
+## Installation
+At the moment you have to install the library "by hand" (I will release it for using with gradle soon):
+
+copy the library to your "libs" folder. Then include the following line in your "settings.gradle":
+
+```gradle
+include ':libs:datetimepicker'
+```
+then add the following lines to your "build.gradle":
+
+```gradle
+repositories {
+    mavenCentral()
+    flatDir {            <--- add this
+        dirs 'libs'      <---
+    }                    <---
+}
+
+dependencies {
+    compile project(':libs:datetimepicker')  <-- add this line
+...
+```
+
 ## License
 
     Copyright 2014 Artjom König
