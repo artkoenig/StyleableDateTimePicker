@@ -36,7 +36,7 @@ ft.commit();
 ```
 
 ## Installation
-At the moment you have to install the library "by hand" (I will release it for using with gradle soon):
+At the moment you have to install the library "by hand":
 
 copy the library to your "libs" folder. Then include the following line in your "settings.gradle":
 
